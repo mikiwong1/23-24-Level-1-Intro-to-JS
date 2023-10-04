@@ -5,37 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
-        function initialize()
-        {
-            messageOutput = document.getElementById("ouput");
+        function initialize(){
+            messageOutput = document.getElementById("output");
             message = "";
         }
-        
-        function display()
-        {
+        function display(){
             messageOutput.innerHTML = message;
-        
         }
-
-        function addA()
-        {
+        function addA(){
             message += "A";
             display();
         }
-
-        function addCharacter(ch)
-        {
+        function addCharacter(ch){
             message += ch;
             display();
         }
     </script>
 </head>
 <body onload="initialize();">
-    <h1 id="message">0</h1>
-    <hr/>
-    <button onclick="addA();">Add</button>
-</body>
-   
+    
+    <button onclick="addCharacter(`0`);">0</button>
+    <button onclick="addCharacter(`1`);">1</button>
+    <button onclick="addCharacter(`2`);">2</button>
+    <button onclick="addCharacter(`3`);">3</button>
+    <button onclick="addCharacter(`4`);">4</button>
+    <button onclick="addCharacter(`5`);">5</button>
+    <button onclick="addCharacter(`6`);">6</button>
+    <button onclick="addCharacter(`7`);">7</button>
+    <button onclick="addCharacter(`8`);">8</button>
+    <button onclick="addCharacter(`9`);">9</button>
+    <button onclick="addA();">A</button>
+    <div id="output"></div>
 </body>
 </html>
